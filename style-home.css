@@ -1,0 +1,143 @@
+:root{
+--black: #000000 ;
+--green: #152625 ;
+--purple:#2F1229 ;
+--pink:  #FFDFFF ;
+--white: #DEF6FE ;
+}
+html{
+    font-family: 'Pixelify Sans', sans-serif;
+    color: var(--white);
+}
+body{
+    background: linear-gradient(to bottom,var(--green) 0%,var(--black)48%,var(--purple)100%);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+/*Caja pricipal*/
+#container{
+    display: inline-flex;
+    flex-direction: row;   
+    margin: 7rem;
+    
+}
+/*textarea*/
+.areaTexto{
+    background: transparent;
+    color: var(--white);
+    border: none;
+    box-shadow:0 0 5px rgba(21,38,37,1),
+    0 0 10px rgba(21,38,37,1),
+    0 0 20px rgba(21,38,37,1),
+    0 0 40px rgba(21,38,37,1),
+    0 0 80px rgba(21,38,37,1);
+    width: 260px;
+    height: 250px;
+    margin-bottom: 25px;
+    resize: none;
+    outline: none;
+}
+/*caja de texto*/
+.caja-texto{
+    display: grid;
+    margin: 15px 15px;
+}
+/*Advertencia*/
+.advertencia{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    margin: -30px 0px 6px 0px;
+}
+.advertencia-logo{
+    width: 15px;
+    padding: 5px 5px;
+}
+#lleno{
+    display: none;
+}
+/*imagen cuado no hay texto*/
+#vacio{
+    text-align: center;
+}
+#mono{
+ height: 250px;
+}
+#sinMensaje{
+    margin-top: 50px;
+    padding: 0px 50px;
+}
+.sinMensaje{
+   font-size: 25px; 
+}
+
+
+/*botones*/
+.botones{
+    min-width: 130px;
+    height: 40px;
+    color: var(--white);
+    padding: 5px 10px;
+    margin: 15px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-image: linear-gradient(315deg, var(--green) 0%, var(--purple) 75%);
+  }
+  .botones:hover {
+    background-position: right center;
+  }
+  .botones:active {
+    top: 2px;
+}
+/*pie de pagina*/
+footer{
+    font-family: "Cedarville Cursive", cursive;
+    text-align: center;
+}
+
+@media screen and (max-width:800px){
+    body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 2rem;
+    }
+
+    #mono{
+        display: none;
+    }
+    #vacio{
+        margin: -5rem 0;
+    }
+    #container{
+        margin: 1rem 1rem;
+        display: grid;
+        text-align: center;
+    }
+    .areaTexto{
+        width: 10rem;
+        height: 10rem;
+        margin: 1rem 3rem;
+        resize: none;
+        outline: none;
+    }
+    .advertencia{
+    padding: 1rem 2rem;
+    font-size: 10px;
+    margin: -30px 0;
+    }
+    
+}

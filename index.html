@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" type="text/css" href="style-reset.css"/>
+    <link rel="stylesheet" type="text/css" href="style-home.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <main id="container">
+        
+        <div class="caja-texto">
+            <textarea class="areaTexto" placeholder="Ingrese el texto aqui" id="inputTextArea" required></textarea>
+            <div class="btnpricipal">
+                <div class="advertencia">
+                <img class="advertencia-logo" src="img/signo.png"/>
+                <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <button onclick="cifrarTexto();" class="botones" id="cifrar"> Cifrar </button>
+                <button onclick="descifrarTexto();" class="botones" id="descifrar"> Descifrar </button>
+            </div>
+        </div>
+
+        <section class="vacio" id="vacio">
+            <img id="mono" src="img/mono.png">
+            <div id="sinMensaje">
+                <p class="sinMensaje">Ningun mensaje fue encontrado</p>
+                <p>ingresa el texto que desea encriptar o desencriptar</p>
+            </div>
+        </section>
+        
+       <div id="lleno">
+           <section class="caja-texto">
+                <textarea class="areaTexto" placeholder="Aqui se muestra el texto cifrado o descifrado" id="outPutTextArea" readonly></textarea>
+                <button onclick="copiarTexto();" value="copiar" class="botones"> Copiar </button>
+            </section>
+        </div>
+    </main>
+
+       <script src="app.js" defer></script>
+    <footer>Israel Rodriguez</footer>
+</body>
+</html>
