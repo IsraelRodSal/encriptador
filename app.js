@@ -20,11 +20,21 @@ function procesarTexto(texto, operacion){
                                     .replaceAll('o',"ober")
                                     .replaceAll('u',"ufat");
                 } else if (operacion === 'descifrar') {
-                    textoArea = textoArea.replaceAll('enter',"e")
-                                    .replaceAll('imes',"i")
-                                    .replaceAll('ai',"a")
-                                    .replaceAll('ober',"o")
-                                    .replaceAll('ufat',"u");
+                     if(textoArea.includes('ai')){
+                        textoArea = textoArea.replace(/ai/g,'a'); 
+                     }
+                     if(textoArea.includes('enter')){
+                        textoArea = textoArea.replace(/enter/g,'e'); 
+                     }
+                     if(textoArea.includes('imes')){
+                        textoArea = textoArea.replace(/imes/g,'i'); 
+                     }
+                     if(textoArea.includes('ober')){
+                        textoArea = textoArea.replace(/ober/g,'o'); 
+                     }
+                     if(textoArea.includes('ufat')){
+                        textoArea = textoArea.replace(/ufat/g,'u'); 
+                     }
             }
             // Se asigna el resultado al área de texto de salida
             document.getElementById("outPutTextArea").value = textoArea;
