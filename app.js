@@ -20,7 +20,7 @@ function procesarTexto(texto, operacion){
                                     .replaceAll('o',"ober")
                                     .replaceAll('u',"ufat");
                 } else if (operacion === 'descifrar') {
-                     if(textoArea.includes('ai')){
+                    if(textoArea.includes('ai')){
                         textoArea = textoArea.replace(/ai/g,'a'); 
                      }
                      if(textoArea.includes('enter')){
